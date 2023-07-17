@@ -12,16 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace AppPrueba
+namespace AppPrueba.Vistas
 {
     /// <summary>
-    /// Lógica de interacción para VentanaGenReserva.xaml
+    /// Lógica de interacción para VLogin.xaml
     /// </summary>
-    public partial class VentanaGenReserva : Window
+    public partial class VLogin : Window
     {
-        public VentanaGenReserva()
+        public VLogin()
         {
             InitializeComponent();
+        }
+
+        private void txtMatricula_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+        private void BtnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            MConductor interfaz1 = new();
+            interfaz1.Show();
+            Close();
         }
     }
 }

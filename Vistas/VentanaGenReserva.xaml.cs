@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace AppPrueba
+namespace AppPrueba.Vistas
 {
     /// <summary>
-    /// Lógica de interacción para VentanaLogin.xaml
+    /// Lógica de interacción para VentanaGenReserva.xaml
     /// </summary>
-    public partial class VentanaLogin : Window
+    public partial class VentanaGenReserva : Window
     {
-        public VentanaLogin()
+        public VentanaGenReserva()
         {
             InitializeComponent();
         }

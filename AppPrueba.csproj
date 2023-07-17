@@ -8,13 +8,28 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Captura de pantalla 2023-07-06 090414.png" />
+    <None Remove="Linea azul.png" />
     <None Remove="Logo 3.png" />
+    <None Remove="Shuttle services logo.png" />
+    <None Remove="Vistas\Conductor.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Captura de pantalla 2023-07-06 090414.png" />
-    <Resource Include="Logo 3.png" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Png\Linea azul.png" />
+    <Resource Include="Png\Shuttle services logo.png" />
   </ItemGroup>
 
 </Project>

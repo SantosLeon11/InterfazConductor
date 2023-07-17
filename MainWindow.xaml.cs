@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppPrueba.Vistas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,21 +30,21 @@ namespace AppPrueba
         {
             VentanaGenReserva interfaz = new();
             interfaz.Show();
-           this.Close();
+            Close();
         }
 
         private void BtnConR_Click(object sender, RoutedEventArgs e)
         {
             VentanaConReserva interfaz = new ();
             interfaz.Show();
-            this.Close();
+            Close();
         }
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            VentanaLogin interfaz1 = new();
+            VLogin interfaz1 = new();
             interfaz1.Show();
-            this.Close();
+            Close();
         }
     }
 }
