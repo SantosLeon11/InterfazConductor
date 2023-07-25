@@ -57,6 +57,9 @@ namespace AppPrueba.Vistas
             }
         }
 
-        
+        private void UserTable_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

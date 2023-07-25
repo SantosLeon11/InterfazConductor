@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AppPrueba.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,9 @@ namespace AppPrueba.Context
         {
             options.UseMySQL("server = localhost;database = Conductor; user = root; password =");
         }
-        //public DbSet<Usuario> Usuarios { get; set; }
-        //public DbSet<Rol> Roles { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Conductor> Conductores { get; set; }
+        //public DbSet<Reservas> Reservas { get; set; }
+        //public DbSet<Sistemas> Sistemas { get; set; }
     }
 }

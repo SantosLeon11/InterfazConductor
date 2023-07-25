@@ -7,12 +7,33 @@
         mc:Ignorable="d"
         Title="MConductor" Height="450" Width="800">
     <Grid>
+        <DataGrid x:Name="UserTable" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="315,108,31,79" SelectionChanged="UserTable_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding PKCliente}" />
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Apellido" Binding="{Binding LastName}" />
+                <DataGridTextColumn Header="Tel" Binding="{Binding Phone}" />
+                <DataGridTextColumn Header="Pasajeros" Binding="{Binding Passengers}"/>
+                <DataGridTextColumn Header="Servicio" Binding="{Binding TypeService}"/>
+
+                <DataGridTemplateColumn Header="Editar">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Select" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+
         <Image HorizontalAlignment="Left" Height="434" VerticalAlignment="Center" Width="80" Source="/Png/Linea azul.png" Stretch="Fill"/>
-        <Button Style="{DynamicResource MuyRedondo}" x:Name="BtnDisponible" Content="" HorizontalAlignment="Left" Margin="571,309,0,0" VerticalAlignment="Top" Width="93" Height="57" Click="BtnDisponible_Click" Foreground="White"/>
-        <Button x:Name="BtnNoDisponible" Content="" HorizontalAlignment="Left" Margin="664,309,0,0" VerticalAlignment="Top" Width="93" Height="57" Style="{DynamicResource MuyRedondo}" Foreground="White" Click="BtnNoDisponible_Click" FontSize="9"/>
-        <Label Content="Disponibilidad" HorizontalAlignment="Left" Margin="591,265,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <Image HorizontalAlignment="Left" Height="151" Margin="532,30,0,0" VerticalAlignment="Top" Width="229" Source="/Png/Shuttle services logo.png" Stretch="Fill"/>
-        <ComboBox x:Name="CbServicios" HorizontalAlignment="Left" Margin="120,217,0,0" VerticalAlignment="Top" Width="120">
+        <Button Style="{DynamicResource MuyRedondo}" x:Name="BtnDisponible" Content="" HorizontalAlignment="Left" Margin="361,56,0,0" VerticalAlignment="Top" Width="81" Height="47" Click="BtnDisponible_Click" Foreground="White"/>
+        <Button x:Name="BtnNoDisponible" Content="" HorizontalAlignment="Left" Margin="442,56,0,0" VerticalAlignment="Top" Width="82" Height="47" Style="{DynamicResource MuyRedondo}" Foreground="White" Click="BtnNoDisponible_Click" FontSize="9"/>
+        <Label Content="Disponibilidad" HorizontalAlignment="Left" Margin="371,20,0,0" VerticalAlignment="Top" FontSize="16" Height="31" Width="112"/>
+        <Image HorizontalAlignment="Left" Height="151" Margin="85,10,0,0" VerticalAlignment="Top" Width="229" Source="/Png/Shuttle services logo.png" Stretch="Fill"/>
+        <ComboBox x:Name="CbServicios" HorizontalAlignment="Left" Margin="649,70,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="Servicio basico"/>
             <ComboBoxItem Content="Servicio medio"/>
             <ComboBoxItem Content="Servicio premium"/>
